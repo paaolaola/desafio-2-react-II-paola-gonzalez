@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
+
 import MyCard from "./MyCard";
 
 const Gallery = () => {
@@ -8,7 +9,9 @@ const Gallery = () => {
     return (
         <section className="gallery">
             <div className="cards-container">
-                {plants && plants.map((plant) => <MyCard key={plant.id} img={plant.src.large} title={plant.alt} url={plant.photographer_url} />)}
+                {plants.map((plant) => (
+                    <MyCard key={plant.id} plant={plant} />
+                ))}
             </div>
         </section>
     );

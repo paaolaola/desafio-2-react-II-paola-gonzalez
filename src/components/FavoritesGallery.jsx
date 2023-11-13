@@ -9,9 +9,9 @@ const FavoritesGallery = () => {
     return (
         <section className="gallery">
             <div className="favorites-container">
-                {favorites.map((plant) => {
-                    return <MyCard key={plant.id} img={plant.src} title={plant.alt} url={plant.photographer_url} />;
-                })}
+                {favorites.map((plant) => (
+                    <MyCard key={plant.id} plant={plant} />
+                ))}
                 {favorites.length === 0 && <h3>No favorites yet. Add a pic</h3>}
             </div>
         </section>

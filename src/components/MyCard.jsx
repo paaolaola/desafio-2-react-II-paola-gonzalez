@@ -3,34 +3,32 @@ import { MyContext } from "../context/MyContext";
 import Card from "react-bootstrap/Card";
 import IconHeart from "./IconHeart";
 
-const MyCard = ({ img, title, url }) => {
+const MyCard = ({ plant }) => {
     const { favorites, addFavorite } = useContext(MyContext);
+    const imageUrl = plant.src ? plant.src.large : "";
 
     const isFavorite = () => {
-        return favorites.some((favorite) => favorite.img === img && favorite.title === title && favorite.url === url);
+        return favorites.includes(plant);
     };
-
     return (
-        <>
-            <Card style={{ width: "18rem" }}>
-                <Card.Body className="card-body">
-                    <Card.Img className="card-image" variant="top" src={img} />
-                    <Card.Title className="text-card">
-                        <h4>{title}</h4>
-                        <div className="url-btn">
-                            <a className="visit-btn" href={url} target="_blank">
-                                Go
-                            </a>
-                        </div>
-                        <div>
-                            <button className="btn-heart" onClick={() => addFavorite({ img, title, url })}>
-                                <IconHeart filled={isFavorite()}></IconHeart>
-                            </button>
-                        </div>
-                    </Card.Title>
-                </Card.Body>
-            </Card>
-        </>
+        <Card style={{ width: "18rem" }}>
+            <Card.Body className="card-body">
+                <Card.Img className="card-image" variant="top" src={imageUrl} />
+                <Card.Title className="text-card">
+                    <h4>{plant.alt}</h4>
+                    <div className="url-btn">
+                        <a className="visit-btn" href={plant.url} target="_blank" rel="noopener noreferrer">
+                            Go
+                        </a>
+                    </div>
+                    <div>
+                        <button className="btn-heart" onClick={() => addFavorite(plant)}>
+                            <IconHeart filled={isFavorite()} />
+                        </button>
+                    </div>
+                </Card.Title>
+            </Card.Body>
+        </Card>
     );
 };
 

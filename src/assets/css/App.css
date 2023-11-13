@@ -211,10 +211,8 @@ nav {
     color: #ffffff;
     line-height: 1.5;
     margin: auto;
-    .text-card .card.favorite {
-        background-color: rgb(221, 138, 138);
-    }
 }
+
 .card-image {
     object-fit: cover;
     width: 100%;
@@ -275,6 +273,11 @@ nav {
         display: grid;
         grid-template-columns: repeat(2, auto);
     }
+
+    .favorites-container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -285,6 +288,11 @@ nav {
     }
 
     .cards-container {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .favorites-container {
         display: grid;
         grid-template-columns: repeat(1, auto);
     }
