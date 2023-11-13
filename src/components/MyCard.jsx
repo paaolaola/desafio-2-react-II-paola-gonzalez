@@ -5,7 +5,6 @@ import IconHeart from "./IconHeart";
 
 const MyCard = ({ plant }) => {
     const { favorites, addFavorite } = useContext(MyContext);
-    const imageUrl = plant.src ? plant.src.large : "";
 
     const isFavorite = () => {
         return favorites.includes(plant);
@@ -13,7 +12,7 @@ const MyCard = ({ plant }) => {
     return (
         <Card style={{ width: "18rem" }}>
             <Card.Body className="card-body">
-                <Card.Img className="card-image" variant="top" src={imageUrl} />
+                <Card.Img className="card-image" variant="top" src={plant.src.large} />
                 <Card.Title className="text-card">
                     <h4>{plant.alt}</h4>
                     <div className="url-btn">
