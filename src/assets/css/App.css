@@ -131,12 +131,12 @@ nav {
     background: rgba(31, 31, 31, 0.5);
     transition: all 500ms ease-out;
     opacity: 0;
-    visibility: hidden;
+    visibility: visible;
     text-align: center;
 }
 .favorites-container .card-body:hover > .text-card {
     opacity: 1;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .favorites-container .card-body:hover > .text-card h4 {

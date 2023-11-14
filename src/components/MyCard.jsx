@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
+
 import Card from "react-bootstrap/Card";
 import IconHeart from "./IconHeart";
 
@@ -16,7 +17,7 @@ const MyCard = ({ plant }) => {
                 <Card.Title className="text-card">
                     <h4>{plant.alt}</h4>
                     <div className="url-btn">
-                        <a className="visit-btn" href={plant.url} target="_blank" rel="noopener noreferrer">
+                        <a className="visit-btn" href={plant.url} target="_blank">
                             Go
                         </a>
                     </div>
