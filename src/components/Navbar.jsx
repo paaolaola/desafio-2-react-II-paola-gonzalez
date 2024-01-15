@@ -7,14 +7,14 @@ const Navbar = () => {
                 <div className="text-logo">
                     <Link to="/">
                         {" "}
-                        <img className="plant-logo" src="./public/icons/plant-garden-svgrepo-com.svg" alt="plant" />
+                        <img className="plant-logo" src="./icons/plant-garden-svgrepo-com.svg" alt="plant" />
                         PLANTS GALLERY{" "}
                     </Link>{" "}
                 </div>
 
                 <div className="text-favorite">
                     <Link to="/favorites">
-                        Favorites <img className="heart-logo" src="./public/icons/heart.svg" alt="heart" />
+                        Favorites <img className="heart-logo" src="./icons/heart.svg" alt="heart" />
                     </Link>
                 </div>
             </nav>
