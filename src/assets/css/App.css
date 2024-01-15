@@ -111,7 +111,7 @@ nav {
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(4, auto);
-    padding: 3rem 6rem;
+    padding: 3rem;
     place-items: center;
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
