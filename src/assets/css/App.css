@@ -52,6 +52,7 @@ nav {
     display: flex;
     align-items: center;
     margin: 1rem 3rem 1rem 2rem;
+    font-size: 20px;
 }
 
 .heart-logo {
@@ -108,17 +109,19 @@ nav {
 /* card gallery */
 .favorites-container {
     display: grid;
+    gap: 3rem;
     grid-template-columns: repeat(4, auto);
-    gap: 2rem;
-    padding: 4rem 6rem 6rem 6rem;
+    padding: 3rem 6rem;
     place-items: center;
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
     color: #dedcdc;
-    text-align: center;
     position: relative;
 }
-
+.message-favorite {
+    grid-column: span 4;
+    text-align: center;
+}
 .favorites-container .card-body img {
     transition: all 500ms ease-out;
 }

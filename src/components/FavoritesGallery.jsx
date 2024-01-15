@@ -12,7 +12,7 @@ const FavoritesGallery = () => {
                 {favorites.map((plant) => (
                     <MyCard key={plant.id} plant={plant} />
                 ))}
-                {favorites.length === 0 && <h3>No favorites yet. Add a pic</h3>}
+                {favorites.length === 0 && <h3 className="message-favorite">No favorites yet. Add a pic</h3>}
             </div>
         </section>
     );

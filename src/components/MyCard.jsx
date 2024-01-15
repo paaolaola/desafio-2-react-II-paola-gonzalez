@@ -1,15 +1,26 @@
-import { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { MyContext } from "../context/MyContext";
 
 import Card from "react-bootstrap/Card";
 import IconHeart from "./IconHeart";
 
 const MyCard = ({ plant }) => {
-    const { favorites, addFavorite } = useContext(MyContext);
+    const { favorites, addFavorite, removeFavorite } = useContext(MyContext);
+    const [isPlantFavorite, setIsPlantFavorite] = useState(favorites.includes(plant));
 
-    const isFavorite = () => {
-        return favorites.includes(plant);
+    useEffect(() => {
+        // Actualizar el estado local cuando cambia el estado global de favorites
+        setIsPlantFavorite(favorites.includes(plant));
+    }, [favorites, plant]);
+
+    const handleFavoriteClick = () => {
+        if (isPlantFavorite) {
+            removeFavorite(plant);
+        } else {
+            addFavorite(plant);
+        }
     };
+
     return (
         <Card style={{ width: "18rem" }}>
             <Card.Body className="card-body">
@@ -22,8 +33,8 @@ const MyCard = ({ plant }) => {
                         </a>
                     </div>
                     <div>
-                        <button className="btn-heart" onClick={() => addFavorite(plant)}>
-                            <IconHeart filled={isFavorite()} />
+                        <button className="btn-heart" onClick={handleFavoriteClick}>
+                            <IconHeart filled={isPlantFavorite} />
                         </button>
                     </div>
                 </Card.Title>

@@ -11,7 +11,7 @@ const Home = () => {
     const getPhotos = async () => {
         const apiKey = "Y3TD07sKj2Xxs3XZrWNex5V1TJE6PoLwQzk6R5yxmlwmtyzDL5rF9BAp";
         const searchQuery = "plants";
-        const apiUrl = `https://api.pexels.com/v1/search?query=${searchQuery}&per_page=20`;
+        const apiUrl = `https://api.pexels.com/v1/search?query=${searchQuery}&per_page=100`;
 
         try {
             const res = await fetch(apiUrl, {
