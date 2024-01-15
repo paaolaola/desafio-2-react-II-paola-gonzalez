@@ -9,7 +9,6 @@ const MyCard = ({ plant }) => {
     const [isPlantFavorite, setIsPlantFavorite] = useState(favorites.includes(plant));
 
     useEffect(() => {
-        // Actualizar el estado local cuando cambia el estado global de favorites
         setIsPlantFavorite(favorites.includes(plant));
     }, [favorites, plant]);
 
