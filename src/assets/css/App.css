@@ -10,7 +10,7 @@ body {
     background-color: rgb(30, 45, 30);
 }
 
-/* navbar */
+/*Navbar*/
 .App {
     text-align: center;
     color: #dedcdc;
@@ -21,7 +21,7 @@ body {
 }
 
 .text-title-favorites {
-    text-align: center;
+    text-align: justify;
     color: #ffffff;
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
@@ -66,7 +66,7 @@ nav {
     margin-right: 1rem;
 }
 
-/* titles views */
+/*Titles views*/
 .text-error {
     text-align: center;
     margin: 3rem 0;
@@ -83,7 +83,7 @@ nav {
     margin: 3rem 0;
 }
 
-/* text home*/
+/*Text home*/
 .text-title1 {
     text-align: justify;
     color: #000000;
@@ -106,7 +106,7 @@ nav {
     padding: 0rem 0 3rem 0;
 }
 
-/* card gallery */
+/*Card gallery*/
 .favorites-container {
     display: grid;
     gap: 3rem;
@@ -246,7 +246,7 @@ nav {
     border-style: none;
     border: 2px solid transparent;
 }
-/*favorites section*/
+/*Favorites section*/
 .button-home {
     display: block;
     text-align: center;
@@ -254,7 +254,7 @@ nav {
     background-color: #dedcdc;
 }
 
-/* footer */
+/*Footer*/
 .text-footer {
     background-color: #ddd7d7;
     padding: 1rem;
@@ -264,39 +264,91 @@ nav {
     width: 40px;
 }
 
-/* responsive */
-@media screen and (max-width: 768px) {
-    .text-titles {
-        display: flex;
-        flex-direction: column;
-        padding: 0rem 0 3rem 0;
-    }
-
-    .cards-container {
+/*Responsive*/
+@media screen and (min-width: 1025px) and (max-width: 1435px) {
+    .cards-container,
+    .favorites-container {
         display: grid;
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(3, auto);
+        padding: 2rem;
     }
-
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .cards-container,
     .favorites-container {
         display: grid;
         grid-template-columns: repeat(2, auto);
+        padding: 2rem;
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (min-width: 340px) and (max-width: 767px) {
+    .plant-logo {
+        width: 30px;
+    }
+    .text-logo {
+        font-size: 1.3rem;
+        margin: 0.5rem;
+        text-align: center;
+    }
+    .text-favorite {
+        font-size: 13px;
+        margin: 1rem;
+    }
+
     .text-titles {
         display: flex;
         flex-direction: column;
-        padding: 0rem 0 3rem 0;
+    }
+    .text-title1 {
+        padding: 3rem;
+    }
+    .text-title2 {
+        padding: 3rem;
     }
 
-    .cards-container {
-        display: grid;
-        grid-template-columns: repeat(1, auto);
-    }
-
+    .cards-container,
     .favorites-container {
         display: grid;
         grid-template-columns: repeat(1, auto);
+        padding: 1rem;
+    }
+}
+@media screen and (max-width: 339px) {
+    .plant-logo {
+        width: 25px;
+        margin: 0;
+    }
+    .text-logo {
+        font-size: 13px;
+        margin: 0;
+        padding: 1rem;
+    }
+    .text-favorite {
+        font-size: 13px;
+        margin: 1rem;
+    }
+    .text-titles {
+        display: flex;
+        flex-direction: column;
+    }
+    .text-title1 {
+        padding: 2rem;
+    }
+    .text-title2 {
+        padding: 2rem;
+    }
+    .cards-container,
+    .favorites-container {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        padding: 0rem;
+    }
+    .card-image .card-body {
+        width: 80%;
+    }
+    .App,
+    .favorites-title {
+        font-size: 20px;
     }
 }
