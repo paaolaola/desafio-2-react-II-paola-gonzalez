@@ -169,8 +169,8 @@ nav {
     color: #dedcdc;
     text-align: center;
     position: relative;
-    gap: 2rem;
-    padding: 0 6rem 6rem 6rem;
+    gap: 3rem;
+    padding: 3rem;
 }
 
 .card-body {
