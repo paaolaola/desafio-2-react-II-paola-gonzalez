@@ -7,7 +7,7 @@
     font-family: "Work Sans", sans-serif;
 }
 body {
-    background-color: rgb(30, 45, 30);
+    background-color: #1e2d1e;
 }
 
 /*Navbar*/
@@ -16,6 +16,7 @@ body {
     color: #dedcdc;
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
+    font-size: 40px;
     text-align: center;
     margin: 3rem 1rem;
 }
@@ -25,8 +26,8 @@ body {
     color: #ffffff;
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
-    font-size: 16px;
-    background-color: rgb(221, 138, 138);
+    font-size: 20px;
+    background-color: #dd8a8a;
     padding: 2rem 4rem;
 }
 a {
@@ -47,6 +48,7 @@ nav {
 .text-logo {
     font-size: 2rem;
     margin: 1rem 2rem 1rem 3rem;
+    color: red;
 }
 .text-favorite {
     display: flex;
@@ -64,6 +66,7 @@ nav {
 .plant-logo {
     width: 40px;
     margin-right: 1rem;
+    color: rgb(30, 45, 30);
 }
 
 /*Titles views*/
@@ -80,6 +83,7 @@ nav {
     color: #ffffff;
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
+    font-size: 40px;
     margin: 3rem 0;
 }
 
@@ -89,6 +93,7 @@ nav {
     color: #000000;
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
+    font-size: 20px;
     background-color: #dedcdc;
     padding: 3rem 5rem 3rem 6rem;
 }
@@ -98,6 +103,7 @@ nav {
     color: #ffffff;
     font-family: "Work Sans", sans-serif;
     font-weight: 200;
+    font-size: 20px;
     background-color: rgb(221, 138, 138);
     padding: 3rem 8rem 3rem 6rem;
 }
@@ -264,7 +270,7 @@ nav {
     width: 40px;
 }
 
-/*Responsive*/
+/*RESPONSIVE*/
 @media screen and (min-width: 1025px) and (max-width: 1435px) {
     .cards-container,
     .favorites-container {

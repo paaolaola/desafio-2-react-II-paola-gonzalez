@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
-
 import MyCard from "./MyCard";
 
 const FavoritesGallery = () => {
+    //Se usa el hook useContext para acceder al contexto y obtener el valor de la propiedad favorites
     const { favorites } = useContext(MyContext);
 
     return (

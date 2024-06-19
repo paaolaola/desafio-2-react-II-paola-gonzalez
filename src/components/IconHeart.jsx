@@ -1,4 +1,5 @@
 const IconHeart = ({ filled }) => {
+    //El componente IconHeart recibe una prop filled que determina si el corazón se muestra relleno o no
     return (
         <svg width="40px" viewBox="0 0 24 24">
             <path

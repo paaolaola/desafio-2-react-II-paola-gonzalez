@@ -5,7 +5,6 @@ const Favorites = () => {
     return (
         <main>
             <h1 className="favorites-title"> YOUR FAVORITES PICS</h1>
-
             <div className="text-title-favorites">
                 <p>
                     Feel free to pick your favorite plant pics and save them here or let them go, entirely up to you! It's your visual playground – choose,

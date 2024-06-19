@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
-
 import MyCard from "./MyCard";
 
 const Gallery = () => {
+    //Usamos el hook useContext para acceder al contexto y obtener el valor de la propiedad plants
     const { plants } = useContext(MyContext);
 
     return (
