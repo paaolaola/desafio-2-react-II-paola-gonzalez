@@ -27,7 +27,7 @@ const MyCard = ({ plant }) => {
                 transition: Zoom,
                 position: "bottom-center",
                 style: toastStyle,
-                autoClose: 5000,
+                autoClose: 1000,
             });
             removeFavorite(plant);
         } else {
@@ -35,7 +35,7 @@ const MyCard = ({ plant }) => {
                 transition: Zoom,
                 position: "bottom-center",
                 style: toastStyle,
-                autoClose: 7000,
+                autoClose: 1000,
             });
             addFavorite(plant);
         }
